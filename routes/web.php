@@ -15,11 +15,6 @@ use Twilio\Rest\Client;
 |
 */
 
-Route::get('/', [AssistantController::class, 'default'])->name('home');
+Route::get('/', [AssistantController::class, 'index'])->name('home');
 Route::post('/webhooks/twilio', [TwilioController::class, 'incoming'])->name('incoming');
 
-
-// Route::get('/test', function () {
-//     return "testing";
-
-// });

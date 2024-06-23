@@ -13,10 +13,14 @@ class WhatsappNumber extends Model
         "waid",
         "name",
         "dob",
-        "taxi_assistant",
+        "assistant",
     ];
 
     protected $casts = [
         'dob' => 'Y-d-m'
     ];
+
+    public function bookings(){
+        return $this->hasMany(Booking::class);
+    }
 }
